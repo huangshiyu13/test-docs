@@ -66,7 +66,7 @@ print("READTHEDOCS_LANGUAGE:", os.environ.get("READTHEDOCS_LANGUAGE"))
 if os.environ.get('READTHEDOCS') == "True":
     lang = os.environ.get("READTHEDOCS_LANGUAGE")
     lang = lang.split("_")[0] if lang else None
-    if lang in ["cn"]:
+    if lang in ["zh"]:
         copyfile("index_{}.rst".format(lang), "index.rst")
     else:
         copyfile("index_en.rst", "index.rst")
